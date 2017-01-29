@@ -5,9 +5,9 @@ node_js:
     - node
 before_script:
     - npm install
-    - npm install angular-cli -g
+    - npm i -g angular-cli-ghpages
 script:
     - npm test
-    - npm run tsc
+    - ng build --prod
 deploy:
-    - ng github-pages:deploy --message "Deploying to Github Pages"
+    - angular-cli-ghpages --repo=https://GH_TOKEN@github.com/dolan-bio/website.git --name="Travis CI"
