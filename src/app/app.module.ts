@@ -9,6 +9,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { SummaryComponent } from './summary/summary.component';
 import { GithubComponent } from './github/github.component';
 import { ResumeComponent } from './resume/resume.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { ResumeComponent } from './resume/resume.component';
         ContactDetailsComponent,
         SummaryComponent,
         GithubComponent,
-        ResumeComponent
+        ResumeComponent,
+        SkillsComponent
     ],
     imports: [
         BrowserModule,
