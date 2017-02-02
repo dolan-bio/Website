@@ -10,6 +10,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { GithubComponent } from './github/github.component';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { SkillsComponent } from './skills/skills.component';
         SummaryComponent,
         GithubComponent,
         ResumeComponent,
-        SkillsComponent
+        SkillsComponent,
+        PortfolioComponent
     ],
     imports: [
         BrowserModule,
