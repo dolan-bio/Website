@@ -11,6 +11,7 @@ import { GithubComponent } from './github/github.component';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
         GithubComponent,
         ResumeComponent,
         SkillsComponent,
-        PortfolioComponent
+        PortfolioComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
