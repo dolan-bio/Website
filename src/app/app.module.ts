@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { SummaryComponent } from './summary/summary.component';
 import { GithubComponent } from './github/github.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { GithubComponent } from './github/github.component';
         NavbarComponent,
         ContactDetailsComponent,
         SummaryComponent,
-        GithubComponent
+        GithubComponent,
+        ResumeComponent
     ],
     imports: [
         BrowserModule,
