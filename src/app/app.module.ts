@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { SummaryComponent } from './summary/summary.component';
+import { GithubComponent } from './github/github.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
         ContactDetailsComponent,
-        SummaryComponent
+        SummaryComponent,
+        GithubComponent
     ],
     imports: [
         BrowserModule,
