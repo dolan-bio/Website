@@ -12,6 +12,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
         ResumeComponent,
         SkillsComponent,
         PortfolioComponent,
-        FooterComponent
+        FooterComponent,
+        HeroComponent
     ],
     imports: [
         BrowserModule,
