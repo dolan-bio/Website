@@ -130,6 +130,9 @@
             "call-signature",
             "parameter",
             "property-declaration"
+        ],
+        "no-unused-variable": [
+            true
         ]
     }
 }
