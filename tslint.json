@@ -133,6 +133,9 @@
         ],
         "no-unused-variable": [
             true
+        ],
+        "no-consecutive-blank-lines": [
+            true
         ]
     }
 }

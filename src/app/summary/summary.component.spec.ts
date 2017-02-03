@@ -11,7 +11,7 @@ describe('SummaryComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [SummaryComponent]
+            declarations: [SummaryComponent],
         })
             .compileComponents();
     }));

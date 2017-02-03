@@ -1,18 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
-import { SummaryComponent } from './summary/summary.component';
+import { FooterComponent } from './footer/footer.component';
 import { GithubComponent } from './github/github.component';
+import { HeroComponent } from './hero/hero.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeroComponent } from './hero/hero.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
     declarations: [
@@ -25,14 +25,14 @@ import { HeroComponent } from './hero/hero.component';
         SkillsComponent,
         PortfolioComponent,
         FooterComponent,
-        HeroComponent
+        HeroComponent,
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule { }
