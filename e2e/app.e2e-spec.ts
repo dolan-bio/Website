@@ -1,14 +1,14 @@
-import { DolanBioPage } from './app.po';
+import { WebsitePage } from './app.po';
 
-describe('dolan-bio App', function() {
-  let page: DolanBioPage;
+describe('website App', () => {
+  let page: WebsitePage;
 
   beforeEach(() => {
-    page = new DolanBioPage();
+    page = new WebsitePage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
