@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/dolan-bio/website.svg?branch=master)](https://travis-ci.org/dolan-bio/website)
 [![Build Status][travis-image]][travis-url]
 # Website
 
