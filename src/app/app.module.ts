@@ -13,6 +13,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
 import { SummaryComponent } from './summary/summary.component';
+import { ThreeDComponent } from './three-d/three-d.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { SummaryComponent } from './summary/summary.component';
         PortfolioComponent,
         FooterComponent,
         HeroComponent,
+        ThreeDComponent,
     ],
     imports: [
         BrowserModule,
