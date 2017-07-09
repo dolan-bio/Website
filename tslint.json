@@ -139,6 +139,9 @@
         ],
         "no-consecutive-blank-lines": [
             true
+        ],
+        "ordered-imports": [
+            true
         ]
     }
 }
