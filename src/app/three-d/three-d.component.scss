@@ -1,4 +1,6 @@
 :host {
+    filter: blur(4px);
     position: fixed;
+    transform: scale(1.03);
     z-index: -100;
 }
