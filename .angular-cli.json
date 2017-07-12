@@ -31,7 +31,10 @@
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/tether/dist/js/tether.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/pixi.js/dist/pixi.js",
+        "../node_modules/p2/build/p2.js",
+        "../node_modules/phaser-ce/build/phaser.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
