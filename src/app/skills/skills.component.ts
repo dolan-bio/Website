@@ -4,7 +4,7 @@ import { Game } from '@dolan-bio/water-skills';
 @Component({
     selector: 'app-skills',
     templateUrl: './skills.component.html',
-    styleUrls: ['./skills.component.sass'],
+    styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
     private game: Game;

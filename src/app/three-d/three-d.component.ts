@@ -18,5 +18,15 @@ export class ThreeDComponent implements OnInit {
         this.stage.run(this.el.nativeElement);
         this.stage.setSize(document.body.clientWidth, window.innerHeight);
 
+        window.addEventListener('scroll', () => {
+            const top = window.scrollY;
+            const convertedTop = this.tiltCalculator(top);
+            this.stage.tilt(convertedTop);
+        }, false);
+    }
+
+    private tiltCalculator(screenPosY: number): number {
+        const scaledY = screenPosY / 170;
+        return 70 * Math.exp(-scaledY) + 0.1;
     }
 }

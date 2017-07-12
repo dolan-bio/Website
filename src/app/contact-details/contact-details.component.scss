@@ -1,0 +1,11 @@
+
+$bg-color: #fff;
+
+:host {
+    background-color: $bg-color;
+    display: block;
+}
+
+hr {
+    margin-bottom: 0;
+}
