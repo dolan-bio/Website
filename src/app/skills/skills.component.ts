@@ -15,7 +15,7 @@ export class SkillsComponent implements OnInit {
 
     public ngOnInit(): void {
         this.game.run('skills-container', () => {
-            // game.setItemsArray([]);
+            this.game.setItemsArray([]);
         });
     }
 
