@@ -1,9 +1,11 @@
+$bg-color: #fff;
+
 .full-span {
     bottom: 0;
     position: absolute;
 }
 
 .container-block {
+    background-color: $bg-color;
     position: relative;
-    background-color: white;
 }

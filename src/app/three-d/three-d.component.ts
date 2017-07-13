@@ -5,7 +5,7 @@ import { Stage } from '@dolan-bio/3d-scene';
 @Component({
     selector: 'app-three-d',
     templateUrl: './three-d.component.html',
-    styleUrls: ['./three-d.component.scss']
+    styleUrls: ['./three-d.component.scss'],
 })
 export class ThreeDComponent implements OnInit {
     private stage: Stage;

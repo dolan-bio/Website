@@ -8,7 +8,7 @@ describe('ThreeDComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ThreeDComponent]
+            declarations: [ThreeDComponent],
         })
             .compileComponents();
     }));
