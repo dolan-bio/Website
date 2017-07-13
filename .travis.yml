@@ -7,6 +7,7 @@ before_script:
     - npm i -g angular-cli-ghpages
 script:
     - npm run lint
+    - npm run sass-lint
     - ng build --prod --base-href "/Website/"
 after_success:
     - ngh --repo=https://GH_TOKEN@github.com/dolan-bio/website.git --name="Travis CI" --email=dolan_miu@hotmail.com
