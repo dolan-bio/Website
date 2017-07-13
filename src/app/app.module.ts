@@ -11,7 +11,7 @@ import { HeroComponent } from './hero/hero.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
-import { SkillsComponent } from './skills/skills.component';
+import { SkillsModule } from './skills/skills.module';
 import { SummaryComponent } from './summary/summary.component';
 import { ThreeDComponent } from './three-d/three-d.component';
 
@@ -23,7 +23,6 @@ import { ThreeDComponent } from './three-d/three-d.component';
         SummaryComponent,
         GithubComponent,
         ResumeComponent,
-        SkillsComponent,
         PortfolioComponent,
         FooterComponent,
         HeroComponent,
@@ -33,6 +32,7 @@ import { ThreeDComponent } from './three-d/three-d.component';
         BrowserModule,
         FormsModule,
         HttpModule,
+        SkillsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
