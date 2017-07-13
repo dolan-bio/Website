@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+    production: true,
+    server: {
+        uri: 'http://dolan-bio.herokuapp.com'
+    },
 };
