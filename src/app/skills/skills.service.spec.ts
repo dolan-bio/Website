@@ -5,7 +5,7 @@ import { SkillsService } from './skills.service';
 describe('SkillsService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [SkillsService]
+            providers: [SkillsService],
         });
     });
 

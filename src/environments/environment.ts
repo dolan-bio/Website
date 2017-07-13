@@ -6,6 +6,6 @@
 export const environment = {
     production: false,
     server: {
-        uri: 'http://localhost:9000'
+        uri: 'http://localhost:9000',
     },
 };
