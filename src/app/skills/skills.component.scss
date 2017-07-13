@@ -1,6 +1,10 @@
-$bg-color: #fff;
-
 :host {
-    background-color: $bg-color;
     display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.skills-container {
+    height: 100%;
+    width: 100%;
 }

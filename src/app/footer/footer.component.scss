@@ -1,6 +1,6 @@
-$bg-color: #fff;
-
 :host {
-    background-color: $bg-color;
     display: block;
+    height: 300px;
+    pointer-events: none;
+    z-index: -10;
 }

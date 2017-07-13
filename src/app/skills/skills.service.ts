@@ -5,16 +5,21 @@ import 'rxjs/Rx';
 
 import { environment } from 'environments/environment';
 
+export interface ISkillModel {
+    name: string;
+    image: string;
+}
+
 @Injectable()
 export class SkillsService {
 
-    private whenFetchedSkills: Observable<string>;
+    private whenFetchedSkills: Observable<ISkillModel[]>;
 
     constructor(http: Http) {
-        this.whenFetchedSkills = http.get(`${environment.server.uri}/skills/595d3d1a734d1d256341a119/image`).map((res) => res.text());
+        this.whenFetchedSkills = http.get(`${environment.server.uri}/skills`).map((res) => res.json() as ISkillModel[]);
     }
 
-    public get WhenFetchedSkills(): Observable<string> {
+    public get WhenFetchedSkills(): Observable<ISkillModel[]> {
         return this.whenFetchedSkills;
     }
 
