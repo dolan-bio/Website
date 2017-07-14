@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 
 interface IMenuItem {
     title: string;
@@ -11,6 +12,8 @@ interface IMenuItem {
     styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+    public whenUserScrolledPast: Observable<boolean>;
+    @ViewChild('nav') public nav: ElementRef;
 
     public menu: IMenuItem[] = [{
         title: 'Profile',
@@ -29,7 +32,18 @@ export class NavbarComponent implements OnInit {
         link: 'portfolio',
     }];
 
-    constructor() { }
+    constructor() {
+        this.whenUserScrolledPast = new Observable<boolean>((observer) => {
+            const navHeight = this.nav.nativeElement.offsetHeight;
+            document.addEventListener('scroll', (e) => {
+                if (document.body.scrollTop > window.innerHeight - navHeight) {
+                    observer.next(true);
+                } else {
+                    observer.next(false);
+                }
+            }, true);
+        });
+    }
 
     public ngOnInit(): void {
     }

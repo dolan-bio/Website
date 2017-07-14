@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    height: 0;
+}
+
+.navbar {
+    transform: translateY(-100%);
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    transform: translateY(0);
+    width: 100%;
+    z-index: 100;
+}
