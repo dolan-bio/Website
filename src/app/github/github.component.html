@@ -1,3 +1,30 @@
 <div class="container">
-    github works!
+    <div>
+        <div class="row text-right">
+            <div class="col-lg-5 col-md-3 col-sm-12 col-xs-12 text-left">
+                <h3>GitHub</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <h2><i class="fa fa-code"></i> {{(github | async)?.lineCount}}</h2>
+                <br>
+                <h3>Lines of code</h3>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                <h2><i class="fa fa-code-fork"></i> {{(github | async)?.contributionCount}}</h2>
+                <br>
+                <h3>Commits</h3>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                <h2><i class="fa fa-github-alt"></i> {{(github | async)?.repoCount}}</h2>
+                <br>
+                <h3>Repos</h3>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="text-center" hidden>
+            <i class="fa fa-cog fa-spin fa-3x"></i>
+            <h3>Fetching data from GitHub</h3>
+        </div>
+    </div>
 </div>

@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { FooterComponent } from './footer/footer.component';
-import { GithubComponent } from './github/github.component';
+import { GithubModule } from './github/github.module';
 import { HeroComponent } from './hero/hero.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -21,7 +21,6 @@ import { ThreeDComponent } from './three-d/three-d.component';
         NavbarComponent,
         ContactDetailsComponent,
         SummaryComponent,
-        GithubComponent,
         ResumeComponent,
         PortfolioComponent,
         FooterComponent,
@@ -33,6 +32,7 @@ import { ThreeDComponent } from './three-d/three-d.component';
         FormsModule,
         HttpModule,
         SkillsModule,
+        GithubModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
