@@ -9,7 +9,7 @@ import { GithubService } from './github.service';
     styleUrls: ['./github.component.scss'],
 })
 export class GithubComponent implements OnInit {
-    public whenFetchedGithub: Observable<any[]>;
+    public whenFetchedGithub: Observable<IGithubModel[]>;
 
     constructor(private githubService: GithubService) {
         this.whenFetchedGithub = this.githubService.WhenFetched;
