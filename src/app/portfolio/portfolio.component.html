@@ -4,6 +4,9 @@
         <div *ngFor="let project of projects">
             <img src="{{project.imageUrl}}">
         </div>
+        <masonry>
+            <masonry-brick class="brick" *ngFor="let project of projects">{{project.imageUrl}}</masonry-brick>
+        </masonry>
     </div>
     <ng-template #loading>
         Loading
