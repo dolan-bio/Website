@@ -1,21 +1,21 @@
 <div class="container">
-    <div *ngIf="github | async; let stats; else loading">
+    <div *ngIf="whenFetchedGithub | async; let github; else loading">
         <div class="row text-right">
             <div class="col-lg-5 col-md-3 col-sm-12 col-xs-12 text-left">
                 <h3>GitHub</h3>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <h2><i class="fa fa-code"></i> {{stats.lineCount}}</h2>
+                <h2><i class="fa fa-code"></i> {{github.lineCount}}</h2>
                 <br>
                 <h3>Lines of code</h3>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
-                <h2><i class="fa fa-code-fork"></i> {{stats.contributionCount}}</h2>
+                <h2><i class="fa fa-code-fork"></i> {{github.contributionCount}}</h2>
                 <br>
                 <h3>Commits</h3>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
-                <h2><i class="fa fa-github-alt"></i> {{stats.repoCount}}</h2>
+                <h2><i class="fa fa-github-alt"></i> {{github.repoCount}}</h2>
                 <br>
                 <h3>Repos</h3>
             </div>
