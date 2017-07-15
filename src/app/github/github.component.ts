@@ -9,10 +9,12 @@ import { GithubService } from './github.service';
     styleUrls: ['./github.component.scss'],
 })
 export class GithubComponent implements OnInit {
-    public whenFetchedGithub: Observable<IGithubModel[]>;
+    public whenFetchedGithub: Observable<GithubModel[]>;
+    public whenFetchedGithubEvent: Observable<GithubEvent>;
 
-    constructor(private githubService: GithubService) {
-        this.whenFetchedGithub = this.githubService.WhenFetched;
+    constructor(githubService: GithubService) {
+        this.whenFetchedGithub = githubService.WhenFetched;
+        this.whenFetchedGithubEvent = githubService.WhenFetchedLastEvent;
     }
 
     public ngOnInit(): void {

@@ -29,4 +29,13 @@
             </div>
         </ng-template>
     </div>
+
+    <div *ngIf="whenFetchedGithubEvent | async; let event; else loadingEvent">
+        <strong>Latest Activity:</strong><span>{{event.repo.name}} {{event.created_at | date:'medium'}}</span>
+    </div>
+    <div>
+        <ng-template #loadingEvent>
+            <h3>Fetching events from GitHub</h3>
+        </ng-template>
+    </div>
 </div>

@@ -7,24 +7,24 @@ import { environment } from 'environments/environment';
 @Injectable()
 export class GithubService {
 
-    private whenFetched: Observable<IGithubModel[]>;
-    private whenFetchedLastEvent: Observable<GitHubEvent>;
+    private whenFetched: Observable<GithubModel[]>;
+    private whenFetchedLastEvent: Observable<GithubEvent>;
 
     constructor(http: Http) {
-        this.whenFetched = http.get(`${environment.server.uri}/github/profile`).map((res) => res.json() as IGithubModel[])
+        this.whenFetched = http.get(`${environment.server.uri}/github/profile`).map((res) => res.json() as GithubModel[])
             .publish()
             .refCount();
 
-        this.whenFetchedLastEvent = http.get(`${environment.server.uri}/github/event`).map((res) => res.json() as GitHubEvent)
+        this.whenFetchedLastEvent = http.get(`${environment.server.uri}/github/event`).map((res) => res.json() as GithubEvent)
             .publish()
             .refCount();
     }
 
-    public get WhenFetched(): Observable<IGithubModel[]> {
+    public get WhenFetched(): Observable<GithubModel[]> {
         return this.whenFetched;
     }
 
-    public get WhenFetchedLastEvent(): Observable<GitHubEvent> {
+    public get WhenFetchedLastEvent(): Observable<GithubEvent> {
         return this.whenFetchedLastEvent;
     }
 }

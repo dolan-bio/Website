@@ -1,6 +1,6 @@
 declare type GithubEventType = "PushEvent" | "IssueCommentEvent" | "IssuesEvent";
 
-declare interface GitHubEvent {
+declare interface GithubEvent {
     id: string,
     type: GithubEventType,
     actor: {
