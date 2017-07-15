@@ -1,3 +1,11 @@
 <div class="container">
     <h1>Portfolio</h1>
+    <div *ngIf="whenFetchedProjects | async; let projects; else loading">
+        <div *ngFor="let project of projects">
+            <img src="{{project.imageUrl}}">
+        </div>
+    </div>
+    <ng-template #loading>
+        Loading
+    </ng-template>
 </div>

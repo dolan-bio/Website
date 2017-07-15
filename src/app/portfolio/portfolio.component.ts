@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+
+import { PortfolioService } from './portfolio.service';
 
 @Component({
     selector: 'app-portfolio',
@@ -6,7 +9,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent {
+    public whenFetchedProjects: Observable<any[]>;
 
-    constructor() { }
-
+    constructor(portfolioService: PortfolioService) {
+        this.whenFetchedProjects = portfolioService.WhenFetched;
+    }
 }
