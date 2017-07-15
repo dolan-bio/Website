@@ -16,7 +16,7 @@ export class SkillsComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this.skillsService.WhenFetchedSkills.subscribe((skills) => {
+        this.skillsService.WhenFetched.subscribe((skills) => {
             this.game.run('skills-container', () => {
                 this.game.setItemsArray(skills);
             });

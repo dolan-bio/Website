@@ -13,15 +13,15 @@ interface IGithubModel {
 @Injectable()
 export class GithubService {
 
-    private whenFetchedGithub: Observable<IGithubModel[]>;
+    private whenFetched: Observable<IGithubModel[]>;
 
     constructor(http: Http) {
-        this.whenFetchedGithub = http.get(`${environment.server.uri}/github/profile`).map((res) => res.json() as IGithubModel[])
+        this.whenFetched = http.get(`${environment.server.uri}/github/profile`).map((res) => res.json() as IGithubModel[])
             .publish()
             .refCount();
     }
 
-    public get WhenFetchedGithub(): Observable<IGithubModel[]> {
-        return this.whenFetchedGithub;
+    public get WhenFetched(): Observable<IGithubModel[]> {
+        return this.whenFetched;
     }
 }

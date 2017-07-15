@@ -13,14 +13,14 @@ export interface ISkillModel {
 @Injectable()
 export class SkillsService {
 
-    private whenFetchedSkills: Observable<ISkillModel[]>;
+    private whenFetched: Observable<ISkillModel[]>;
 
     constructor(http: Http) {
-        this.whenFetchedSkills = http.get(`${environment.server.uri}/skills`).map((res) => res.json() as ISkillModel[]);
+        this.whenFetched = http.get(`${environment.server.uri}/skills`).map((res) => res.json() as ISkillModel[]);
     }
 
-    public get WhenFetchedSkills(): Observable<ISkillModel[]> {
-        return this.whenFetchedSkills;
+    public get WhenFetched(): Observable<ISkillModel[]> {
+        return this.whenFetched;
     }
 
 }

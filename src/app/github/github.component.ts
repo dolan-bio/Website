@@ -12,7 +12,7 @@ export class GithubComponent implements OnInit {
     public github: Observable<any[]>;
 
     constructor(private githubService: GithubService) {
-        this.github = this.githubService.WhenFetchedGithub;
+        this.github = this.githubService.WhenFetched;
     }
 
     public ngOnInit(): void {
