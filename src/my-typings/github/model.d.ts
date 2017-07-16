@@ -1,4 +1,4 @@
-declare interface GithubModel {
+interface GithubModel {
     contributionCount: number;
     lineCount: number;
     repoCount: number;

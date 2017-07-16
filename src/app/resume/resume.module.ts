@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { EducationsService } from './educations.service';
+import { ExperiencesService } from './experiences.service';
 import { ResumeComponent } from './resume.component';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ResumeComponent } from './resume.component';
     ],
     providers: [
         EducationsService,
+        ExperiencesService,
     ],
     exports: [
         ResumeComponent,

@@ -4,6 +4,16 @@
     <div *ngIf="whenFetchedEducations | async; let educations; else loadingEducations">
         {{educations | json}}
     </div>
+    <ng-template #loadingEducations>
+        Loading Education
+    </ng-template>
+
+    <div *ngIf="whenFetchedExperiences | async; let experiences; else loadingExperiences">
+        {{experiences | json}}
+    </div>
+    <ng-template #loadingExperiences>
+        Loading Education
+    </ng-template>
 
     <button type="button" class="btn btn-success btn-lg">Generate CV</button>
 
