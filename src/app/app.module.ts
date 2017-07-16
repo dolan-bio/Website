@@ -10,7 +10,7 @@ import { GithubModule } from './github/github.module';
 import { HeroModule } from './hero/hero.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PortfolioModule } from './portfolio/portfolio.module';
-import { ResumeComponent } from './resume/resume.component';
+import { ResumeModule } from './resume/resume.module';
 import { SkillsModule } from './skills/skills.module';
 import { SummaryComponent } from './summary/summary.component';
 import { ThreeDComponent } from './three-d/three-d.component';
@@ -21,7 +21,6 @@ import { ThreeDComponent } from './three-d/three-d.component';
         NavbarComponent,
         ContactDetailsComponent,
         SummaryComponent,
-        ResumeComponent,
         FooterComponent,
         ThreeDComponent,
     ],
@@ -33,6 +32,7 @@ import { ThreeDComponent } from './three-d/three-d.component';
         GithubModule,
         PortfolioModule,
         HeroModule,
+        ResumeModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

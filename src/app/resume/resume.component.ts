@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+
+import { EducationsService } from './educations.service';
 
 @Component({
     selector: 'app-resume',
@@ -6,7 +9,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./resume.component.scss'],
 })
 export class ResumeComponent {
+    public whenFetchedEducations: Observable<EducationModel[]>;
 
-    constructor() { }
+    constructor(educationsService: EducationsService) {
+        this.whenFetchedEducations = educationsService.WhenFetched;
+    }
 
 }

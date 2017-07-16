@@ -1,6 +1,10 @@
 <div class="container">
     <h1>Resume</h1>
 
+    <div *ngIf="whenFetchedEducations | async; let educations; else loadingEducations">
+        {{educations | json}}
+    </div>
+
     <button type="button" class="btn btn-success btn-lg">Generate CV</button>
 
 </div>
