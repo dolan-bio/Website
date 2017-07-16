@@ -1,13 +1,17 @@
 <div class="container">
     <h1>Portfolio</h1>
-    <div *ngIf="whenFetchedProjects | async; let projects; else loading">
-        <div *ngFor="let project of projects">
-            <img src="{{project.imageUrl}}">
-        </div>
-        <masonry>
-            <masonry-brick class="brick" *ngFor="let project of projects">{{project.imageUrl}}</masonry-brick>
-        </masonry>
-    </div>
+    <masonry *ngIf="whenFetchedProjects | async; let projects; else loading" [options]="masonryOptions">
+        <masonry-brick class="brick" *ngFor="let project of projects">
+            <div class="card">
+                <img class="card-img-top img" [src]="project.imageUrl" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">{{project.title}}</h4>
+                    <p class="card-text">{{project.description}}</p>
+                    <a [href]="project.link" class="btn btn-primary">Check it out</a>
+                </div>
+            </div>
+        </masonry-brick>
+    </masonry>
     <ng-template #loading>
         Loading
     </ng-template>

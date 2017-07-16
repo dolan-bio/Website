@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MasonryOptions } from 'angular2-masonry';
 import { Observable } from 'rxjs/Rx';
 
 import { PortfolioService } from './portfolio.service';
@@ -10,8 +11,12 @@ import { PortfolioService } from './portfolio.service';
 })
 export class PortfolioComponent {
     public whenFetchedProjects: Observable<any[]>;
+    public masonryOptions: MasonryOptions;
 
     constructor(portfolioService: PortfolioService) {
         this.whenFetchedProjects = portfolioService.WhenFetched;
+        this.masonryOptions = {
+            gutter: 10,
+        }
     }
 }
