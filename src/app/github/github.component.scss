@@ -16,3 +16,9 @@ h2 {
 .event {
     padding-top: 40px;
 }
+
+.caption {
+    &::after {
+        content: '\A0 \2014';
+    }
+}
