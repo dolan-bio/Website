@@ -36,9 +36,9 @@
                         <p>{{experience.summary}}</p>
                     </div>
                     <div class="col-lg-4">
-                        <p><i class="fa fa-briefcase" aria-hidden="true"></i>{{experience.company.name}}</p>
-                        <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{experience.startDate.year}} - {{experience.isCurrent
-                            ? 'Present' : experience.endDate?.year}}</p>
+                        <p><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>{{experience.company.name}}</p>
+                        <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{experience.startDate.month}}/{{experience.startDate.year}} - {{experience.isCurrent
+                            ? 'Present' : experience.endDate?.month + '/' + experience.endDate?.year}}</p>
                     </div>
                 </div>
             </div>
