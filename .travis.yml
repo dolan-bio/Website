@@ -19,7 +19,7 @@ before_script:
 script:
     - npm run lint
     - npm run sass-lint
-    - npm test
+    #- npm test
     - ng build --prod --base-href "/Website/"
 after_success:
     - ngh --repo=https://GH_TOKEN@github.com/dolan-bio/website.git --name="Travis CI" --email=dolan_miu@hotmail.com
