@@ -1,9 +1,11 @@
 /* tslint:disable:no-unused-variable */
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 import { By } from '@angular/platform-browser';
 
 import { SkillsComponent } from './skills.component';
+import { SkillsService } from './skills.service';
 
 describe('SkillsComponent', () => {
     let component: SkillsComponent;
@@ -11,7 +13,15 @@ describe('SkillsComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [SkillsComponent],
+            declarations: [
+                SkillsComponent,
+            ],
+            imports: [
+                HttpModule,
+            ],
+            providers: [
+                SkillsService,
+            ],
         })
             .compileComponents();
     }));

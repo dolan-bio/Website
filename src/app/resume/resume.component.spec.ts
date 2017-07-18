@@ -1,8 +1,11 @@
 /* tslint:disable:no-unused-variable */
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 import { By } from '@angular/platform-browser';
 
+import { EducationsService } from './educations.service';
+import { ExperiencesService } from './experiences.service';
 import { ResumeComponent } from './resume.component';
 
 describe('ResumeComponent', () => {
@@ -12,6 +15,13 @@ describe('ResumeComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ResumeComponent],
+            imports: [
+                HttpModule,
+            ],
+            providers: [
+                EducationsService,
+                ExperiencesService,
+            ],
         })
             .compileComponents();
     }));

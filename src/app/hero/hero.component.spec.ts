@@ -4,6 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { HeroComponent } from './hero.component';
+import { MouseIconComponent } from './mouse-icon/mouse-icon.component';
 
 describe('HeroComponent', () => {
     let component: HeroComponent;
@@ -11,7 +12,10 @@ describe('HeroComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HeroComponent],
+            declarations: [
+                HeroComponent,
+                MouseIconComponent,
+            ],
         })
             .compileComponents();
     }));

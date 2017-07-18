@@ -1,12 +1,37 @@
 /* tslint:disable:no-unused-variable */
 import { async, TestBed } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { FooterComponent } from './footer/footer.component';
+import { GithubModule } from './github/github.module';
+import { HeroModule } from './hero/hero.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PortfolioModule } from './portfolio/portfolio.module';
+import { ResumeModule } from './resume/resume.module';
+import { SkillsModule } from './skills/skills.module';
+import { SummaryComponent } from './summary/summary.component';
+import { ThreeDComponent } from './three-d/three-d.component';
 
 describe('AppComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [
                 AppComponent,
+                NavbarComponent,
+                ContactDetailsComponent,
+                SummaryComponent,
+                FooterComponent,
+                ThreeDComponent,
+            ],
+            imports: [
+                HttpModule,
+                SkillsModule,
+                GithubModule,
+                PortfolioModule,
+                HeroModule,
+                ResumeModule,
             ],
         });
         TestBed.compileComponents();
@@ -16,18 +41,5 @@ describe('AppComponent', () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
-    }));
-
-    it(`should have as title 'app works!'`, async(() => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
-        expect(app.title).toEqual('app works!');
-    }));
-
-    it('should render title in a h1 tag', async(() => {
-        const fixture = TestBed.createComponent(AppComponent);
-        fixture.detectChanges();
-        const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('h1').textContent).toContain('app works!');
     }));
 });

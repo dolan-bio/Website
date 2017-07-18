@@ -1,4 +1,5 @@
 import { inject, TestBed } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 
 import { PortfolioService } from './portfolio.service';
 
@@ -6,6 +7,9 @@ describe('PortfolioService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [PortfolioService],
+            imports: [
+                HttpModule,
+            ],
         });
     });
 

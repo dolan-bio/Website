@@ -26,7 +26,6 @@ import { ThreeDComponent } from './three-d/three-d.component';
     ],
     imports: [
         BrowserModule,
-        FormsModule,
         HttpModule,
         SkillsModule,
         GithubModule,

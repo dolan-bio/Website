@@ -1,8 +1,10 @@
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 import { By } from '@angular/platform-browser';
 
 import { GithubComponent } from './github.component';
+import { GithubService } from './github.service';
 
 describe('GithubComponent', () => {
     let component: GithubComponent;
@@ -10,7 +12,15 @@ describe('GithubComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [GithubComponent],
+            declarations: [
+                GithubComponent,
+            ],
+            imports: [
+                HttpModule,
+            ],
+            providers: [
+                GithubService,
+            ],
         })
             .compileComponents();
     }));
