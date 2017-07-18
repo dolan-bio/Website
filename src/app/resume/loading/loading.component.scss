@@ -1,3 +1,6 @@
+$gradient-side-color: #eee;
+$gradient-middle-color: #ddd;
+
 @keyframes placeHolderShimmer {
     0% {
         background-position: -100% 0;
@@ -14,7 +17,7 @@
     animation-iteration-count: infinite;
     animation-name: placeHolderShimmer;
     animation-timing-function: linear;
-    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background: linear-gradient(to right, $gradient-side-color 8%, $gradient-middle-color 18%, $gradient-side-color 33%);
     background-size: 3000px 100%;
     height: 100%;
     position: relative;

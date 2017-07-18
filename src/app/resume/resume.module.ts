@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { EducationsService } from './educations.service';
 import { ExperiencesService } from './experiences.service';
-import { ResumeComponent } from './resume.component';
 import { LoadingComponent } from './loading/loading.component';
+import { ResumeComponent } from './resume.component';
 
 @NgModule({
     imports: [
