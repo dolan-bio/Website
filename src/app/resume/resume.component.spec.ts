@@ -6,6 +6,7 @@ import { By } from '@angular/platform-browser';
 
 import { EducationsService } from './educations.service';
 import { ExperiencesService } from './experiences.service';
+import { LoadingComponent } from './loading/loading.component';
 import { ResumeComponent } from './resume.component';
 
 describe('ResumeComponent', () => {
@@ -14,7 +15,10 @@ describe('ResumeComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ResumeComponent],
+            declarations: [
+                ResumeComponent,
+                LoadingComponent,
+            ],
             imports: [
                 HttpModule,
             ],

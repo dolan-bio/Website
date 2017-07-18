@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { EducationsService } from './educations.service';
 import { ExperiencesService } from './experiences.service';
 import { ResumeComponent } from './resume.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
     imports: [
@@ -11,6 +12,7 @@ import { ResumeComponent } from './resume.component';
     ],
     declarations: [
         ResumeComponent,
+        LoadingComponent,
     ],
     providers: [
         EducationsService,

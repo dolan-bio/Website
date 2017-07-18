@@ -1,56 +1,80 @@
 <div class="container">
     <h1>Resume</h1>
 
-    <div *ngIf="whenFetchedEducations | async; let educations; else loadingEducations">
-        <div class="row">
-            <div class="col-lg-3">
-                <h2>Experience</h2>
-            </div>
-            <div class="col-lg-9">
-                <div class="row" *ngFor="let education of educations">
-                    <div class="col-lg-8">
-                        <h3>{{education.fieldOfStudy}} - {{education.degree}}</h3>
-                        <p>{{education.notes}}</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p><i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>{{education.schoolName}}</p>
-                        <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{education.startDate.year}} - {{education.endDate.year}}</p>
-                    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <h2>Experience</h2>
+        </div>
+        <div class="col-lg-9" *ngIf="whenFetchedEducations | async; let educations; else loadingEducations">
+            <div class="row" *ngFor="let education of educations">
+                <div class="col-lg-8">
+                    <h3>{{education.fieldOfStudy}} - {{education.degree}}</h3>
+                    <p>{{education.notes}}</p>
+                </div>
+                <div class="col-lg-4">
+                    <p><i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>{{education.schoolName}}</p>
+                    <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{education.startDate.year}} - {{education.endDate.year}}</p>
                 </div>
             </div>
         </div>
+        <ng-template #loadingEducations>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <app-loading count="20"></app-loading>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>
+                            <app-loading count="2"></app-loading>
+                        </p>
+                        <p>
+                            <app-loading count="1"></app-loading>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
     </div>
-    <ng-template #loadingEducations>
-        Loading Education
-    </ng-template>
 
-    <div *ngIf="whenFetchedExperiences | async; let experiences; else loadingExperiences">
-        <div class="row">
-            <div class="col-lg-3">
-                <h2>Experience</h2>
-            </div>
-            <div class="col-lg-9">
-                <div class="row" *ngFor="let experience of experiences">
-                    <div class="col-lg-8">
-                        <h3>{{experience.title}}</h3>
-                        <p>{{experience.summary}}</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>{{experience.company.name}}</p>
-                        <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{experience.startDate.month}}/{{experience.startDate.year}} - {{experience.isCurrent
-                            ? 'Present' : experience.endDate?.month + '/' + experience.endDate?.year}}</p>
-                    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <h2>Experience</h2>
+        </div>
+        <div class="col-lg-9" *ngIf="whenFetchedExperiences | async; let experiences; else loadingExperiences">
+            <div class="row" *ngFor="let experience of experiences">
+                <div class="col-lg-8">
+                    <h3>{{experience.title}}</h3>
+                    <p>{{experience.summary}}</p>
+                </div>
+                <div class="col-lg-4">
+                    <p><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>{{experience.company.name}}</p>
+                    <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{experience.startDate.month}}/{{experience.startDate.year}}
+                        - {{experience.isCurrent ? 'Present' : experience.endDate?.month + '/' + experience.endDate?.year}}</p>
                 </div>
             </div>
         </div>
+        <ng-template #loadingExperiences>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <app-loading count="20"></app-loading>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>
+                            <app-loading count="2"></app-loading>
+                        </p>
+                        <p>
+                            <app-loading count="1"></app-loading>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
     </div>
-    <ng-template #loadingExperiences>
-        Loading Education
-    </ng-template>
 
     <div class="row">
         <div class="col-lg-9 offset-lg-3">
-                <button type="button" class="btn btn-success btn-lg">Generate CV</button>
+            <button type="button" class="btn btn-success btn-lg">Generate CV</button>
 
         </div>
     </div>
