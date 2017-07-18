@@ -13,7 +13,7 @@
         {
           "glob": "**/*",
           "input": "../node_modules/@dolan-bio/3d-scene/assets",
-          "output": "./assets/"
+          "output": "assets"
         }
       ],
       "index": "index.html",
