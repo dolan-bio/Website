@@ -13,6 +13,7 @@ import { ResumeModule } from './resume/resume.module';
 import { SkillsModule } from './skills/skills.module';
 import { SummaryComponent } from './summary/summary.component';
 import { ThreeDComponent } from './three-d/three-d.component';
+import { TipsModule } from './tips/tips.module';
 
 describe('AppComponent', () => {
     beforeEach(() => {
@@ -32,6 +33,7 @@ describe('AppComponent', () => {
                 PortfolioModule,
                 HeroModule,
                 ResumeModule,
+                TipsModule,
             ],
         });
         TestBed.compileComponents();

@@ -16,7 +16,6 @@ export class ResumeComponent {
     constructor(educationsService: EducationsService, experienceService: ExperiencesService) {
         this.whenFetchedEducations = educationsService.WhenFetched;
         this.whenFetchedExperiences = experienceService.WhenFetched;
-
     }
 
 }

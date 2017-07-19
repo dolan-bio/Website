@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Tip of the day</h1>
+    <p class="lead">
+        A random tip from my journey of being a developer
+    </p>
+    <div *ngIf="whenFetchedTip | async; let tip; else loading">
+        <blockquote class="blockquote">
+            <p class="mb-0">{{tip.text}} <span *ngIf="tip.reference">({{tip.reference}})</span></p>
+            <footer class="blockquote-footer">Page {{tip.page ? tip.page : 'Unknown' }} <cite title="Source Title">{{tip.from}}</cite></footer>
+        </blockquote>
+    </div>
+    <ng-template #loading>
+        Loading
+    </ng-template>
+</div>
