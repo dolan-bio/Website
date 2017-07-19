@@ -1,5 +1,5 @@
 import { inject, TestBed } from '@angular/core/testing';
-import { HttpModule } from "@angular/http";
+import { HttpModule } from '@angular/http';
 
 import { TipsService } from './tips.service';
 
