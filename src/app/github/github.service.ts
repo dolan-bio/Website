@@ -7,24 +7,36 @@ import { environment } from 'environments/environment';
 @Injectable()
 export class GithubService {
 
-    private whenFetched: Observable<GithubModel[]>;
-    private whenFetchedLastEvent: Observable<GithubEvent>;
+    private profile$: Observable<GithubModel[]>;
+    private lastEvent$: Observable<GithubEvent>;
+    private rank$: Observable<number>;
 
     constructor(http: Http) {
-        this.whenFetched = http.get(`${environment.server.uri}/github/profile`).map((res) => res.json() as GithubModel[])
+        this.profile$ = http.get(`${environment.server.uri}/github/profile`).map((res) => res.json() as GithubModel[])
             .publish()
             .refCount();
 
-        this.whenFetchedLastEvent = http.get(`${environment.server.uri}/github/event`).map((res) => res.json() as GithubEvent)
+        this.lastEvent$ = http.get(`${environment.server.uri}/github/event`).map((res) => res.json() as GithubEvent)
+            .publish()
+            .refCount();
+
+        this.rank$ = http.get(`${environment.server.uri}/github/rank`).map((res) => res.json() as GithubRank)
+            .map((data) => {
+                return data.rank;
+            })
             .publish()
             .refCount();
     }
 
-    public get WhenFetched(): Observable<GithubModel[]> {
-        return this.whenFetched;
+    public get Profile$(): Observable<GithubModel[]> {
+        return this.profile$;
     }
 
-    public get WhenFetchedLastEvent(): Observable<GithubEvent> {
-        return this.whenFetchedLastEvent;
+    public get LastEvent$(): Observable<GithubEvent> {
+        return this.lastEvent$;
+    }
+
+    public get Rank$(): Observable<number> {
+        return this.rank$;
     }
 }

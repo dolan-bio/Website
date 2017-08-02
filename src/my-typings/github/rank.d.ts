@@ -1,0 +1,3 @@
+interface GithubRank {
+    rank: number;
+}

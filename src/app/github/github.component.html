@@ -43,4 +43,7 @@
             </div>
         </ng-template>
     </div>
+    <div *ngIf="rank$ | async; let rank">
+        <span>I am roughly ranked <strong>{{rank}}</strong> roughly on Github</span>
+    </div>
 </div>
