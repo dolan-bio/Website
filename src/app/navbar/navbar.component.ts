@@ -25,8 +25,8 @@ export class NavbarComponent implements OnInit {
         title: 'Resume',
         link: 'resume',
     }, {
-        title: 'Skills',
-        link: 'skills',
+        title: 'Tips',
+        link: 'tips',
     }, {
         title: 'Portfolio',
         link: 'portfolio',
