@@ -3,13 +3,14 @@
 
     <div class="row">
         <div class="col-lg-3">
-            <h2>Experience</h2>
+            <h2>Education</h2>
         </div>
         <div class="col-lg-9" *ngIf="whenFetchedEducations | async; let educations; else loadingEducations">
             <div class="row" *ngFor="let education of educations">
                 <div class="col-lg-8">
                     <h3>{{education.fieldOfStudy}} - {{education.degree}}</h3>
-                    <p>{{education.notes}}</p>
+                    <p class="description">{{education.notes}}</p>
+                    <hr>
                 </div>
                 <div class="col-lg-4">
                     <p><i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>{{education.schoolName}}</p>
@@ -44,7 +45,8 @@
             <div class="row" *ngFor="let experience of experiences">
                 <div class="col-lg-8">
                     <h3>{{experience.title}}</h3>
-                    <p>{{experience.summary}}</p>
+                    <p class="description">{{experience.summary}}</p>
+                    <hr>
                 </div>
                 <div class="col-lg-4">
                     <p><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>{{experience.company.name}}</p>
