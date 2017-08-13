@@ -25,7 +25,7 @@
     "@dolan-bio/3d-scene": "https://github.com/dolan-bio/ThreeD-Scene.git",
     "@dolan-bio/water-skills": "https://github.com/dolan-bio/Water-Skills.git",
     "angular2-masonry": "^0.4.0",
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "4.0.0-alpha.6",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "ng2-page-scroll": "^4.0.0-beta.11",
