@@ -1,5 +1,6 @@
 $icon-color: #fff;
 $icon-hover-color: #0275d8;
+$drag-prompt-color: #b7b7b7;
 
 :host {
     display: block;
@@ -28,6 +29,15 @@ $icon-hover-color: #0275d8;
     pointer-events: auto;
     width: 100%;
     z-index: 100;
+}
+
+.drag-prompt {
+    bottom: 5px;
+    color: $drag-prompt-color;
+    font-size: .7em;
+    left: 5px;
+    pointer-events: none;
+    position: absolute;
 }
 
 a {
