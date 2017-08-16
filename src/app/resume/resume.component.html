@@ -13,8 +13,8 @@
                     <hr>
                 </div>
                 <div class="col-lg-4">
-                    <p><i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>{{education.schoolName}}</p>
-                    <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{education.startDate.year}} - {{education.endDate.year}}</p>
+                    <p class="institution-details"><i class="fa fa-graduation-cap fa-fw icon" aria-hidden="true"></i>{{education.schoolName}}</p>
+                    <p><i class="fa fa-calendar fa-fw icon" aria-hidden="true"></i>{{education.startDate.year}} - {{education.endDate.year}}</p>
                 </div>
             </div>
         </div>
@@ -49,8 +49,8 @@
                     <hr>
                 </div>
                 <div class="col-lg-4">
-                    <p><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>{{experience.company.name}}</p>
-                    <p><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>{{experience.startDate.month}}/{{experience.startDate.year}}
+                    <p class="institution-details"><i class="fa fa-briefcase fa-fw icon" aria-hidden="true"></i>{{experience.company.name}}</p>
+                    <p><i class="fa fa-calendar fa-fw icon" aria-hidden="true"></i>{{experience.startDate.month}}/{{experience.startDate.year}}
                         - {{experience.isCurrent ? 'Present' : experience.endDate?.month + '/' + experience.endDate?.year}}</p>
                 </div>
             </div>
