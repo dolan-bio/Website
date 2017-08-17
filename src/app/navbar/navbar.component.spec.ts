@@ -1,8 +1,10 @@
 /* tslint:disable:no-unused-variable */
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 import { By } from '@angular/platform-browser';
 
+import { CvModule } from '../cv/cv.module';
 import { NavbarComponent } from './navbar.component';
 
 describe('NavbarComponent', () => {
@@ -12,6 +14,10 @@ describe('NavbarComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [NavbarComponent],
+            imports: [
+                HttpModule,
+                CvModule,
+            ],
         })
             .compileComponents();
     }));
