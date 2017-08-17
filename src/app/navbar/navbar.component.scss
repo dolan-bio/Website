@@ -24,3 +24,9 @@ $hover-color: #0275d8;
         color: $hover-color;
     }
 }
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}

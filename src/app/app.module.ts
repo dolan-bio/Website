@@ -9,7 +9,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { FooterComponent } from './footer/footer.component';
 import { GithubModule } from './github/github.module';
 import { HeroModule } from './hero/hero.module';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarModule } from './navbar/navbar.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { ResumeModule } from './resume/resume.module';
 import { SkillsModule } from './skills/skills.module';
@@ -20,7 +20,6 @@ import { TipsModule } from './tips/tips.module';
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent,
         ContactDetailsComponent,
         SummaryComponent,
         FooterComponent,
@@ -36,6 +35,7 @@ import { TipsModule } from './tips/tips.module';
         ResumeModule,
         TipsModule,
         Ng2PageScrollModule,
+        NavbarModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

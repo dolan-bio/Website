@@ -1,0 +1,19 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+import { CvModule } from '../cv/cv.module';
+import { NavbarComponent } from './navbar.component';
+
+@NgModule({
+    imports: [
+        CommonModule,
+        CvModule,
+    ],
+    declarations: [
+        NavbarComponent,
+    ],
+    exports: [
+        NavbarComponent,
+    ],
+})
+export class NavbarModule { }

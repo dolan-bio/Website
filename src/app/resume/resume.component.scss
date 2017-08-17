@@ -31,3 +31,9 @@ h2 {
 .icon {
     color: $icon-color;
 }
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}

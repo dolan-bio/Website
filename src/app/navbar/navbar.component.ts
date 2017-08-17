@@ -1,5 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
+
+import { CvService } from '../cv/cv.service';
 
 interface IMenuItem {
     title: string;
@@ -11,7 +13,7 @@ interface IMenuItem {
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
     public whenUserScrolledPast: Observable<boolean>;
     @ViewChild('nav') public nav: ElementRef;
 
@@ -32,7 +34,7 @@ export class NavbarComponent implements OnInit {
         link: 'portfolio',
     }];
 
-    constructor() {
+    constructor(private cvService: CvService) {
         this.whenUserScrolledPast = new Observable<boolean>((observer) => {
             const navHeight = this.nav.nativeElement.offsetHeight;
             document.addEventListener('scroll', (e) => {
@@ -45,7 +47,7 @@ export class NavbarComponent implements OnInit {
         });
     }
 
-    public ngOnInit(): void {
+    public generateCv(): void {
+        this.cvService.Cv$.subscribe();
     }
-
 }
