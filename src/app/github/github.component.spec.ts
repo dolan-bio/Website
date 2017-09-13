@@ -1,7 +1,5 @@
-import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
-import { By } from '@angular/platform-browser';
 
 import { GithubComponent } from './github.component';
 import { GithubService } from './github.service';
