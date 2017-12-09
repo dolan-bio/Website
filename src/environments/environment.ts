@@ -8,4 +8,7 @@ export const environment = {
     server: {
         uri: 'http://localhost:9000',
     },
+    webtask: {
+        uri: 'https://app63474144.eu.webtask.io',
+    },
 };
