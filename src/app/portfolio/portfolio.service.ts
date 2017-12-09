@@ -16,7 +16,7 @@ export class PortfolioService {
     whenFetched: any;
 
     constructor(http: Http) {
-        this.whenFetched = http.get(`${environment.server.uri}/projects`).map((res) => res.json() as IProjectModel[])
+        this.whenFetched = http.get(`${environment.webtask.uri}/projects`).map((res) => res.json() as IProjectModel[])
             .publish()
             .refCount();
     }
