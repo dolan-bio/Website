@@ -10,7 +10,7 @@ export class TipsService {
     private whenFetched: Observable<TipModel[]>;
 
     constructor(http: Http) {
-        this.whenFetched = http.get(`${environment.server.uri}/tips`).map((res) => res.json() as TipModel[]);
+        this.whenFetched = http.get(`${environment.webtask.uri}/tips`).map((res) => res.json() as TipModel[]);
     }
 
     public get WhenFetched(): Observable<TipModel[]> {
