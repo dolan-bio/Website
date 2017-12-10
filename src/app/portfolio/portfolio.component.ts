@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MasonryOptions } from 'angular2-masonry';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { PortfolioService } from './portfolio.service';
 

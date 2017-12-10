@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, ResponseContentType } from '@angular/http';
 import { saveAs } from 'file-saver';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { environment } from 'environments/environment';
 
