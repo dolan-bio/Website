@@ -1,9 +1,9 @@
-/* tslint:disable:no-unused-variable */
+import { APP_BASE_HREF } from '@angular/common';
 import { async, TestBed } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { Angulartics2Module } from 'angulartics2';
-import { APP_BASE_HREF } from '@angular/common';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 import { AppComponent } from './app.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
@@ -17,7 +17,6 @@ import { SkillsModule } from './skills/skills.module';
 import { SummaryComponent } from './summary/summary.component';
 import { ThreeDComponent } from './three-d/three-d.component';
 import { TipsModule } from './tips/tips.module';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 describe('AppComponent', () => {
     beforeEach(() => {
