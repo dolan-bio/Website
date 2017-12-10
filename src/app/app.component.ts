@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 import { PageScrollConfig } from 'ng2-page-scroll';
 
 @Component({
@@ -7,7 +8,7 @@ import { PageScrollConfig } from 'ng2-page-scroll';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    constructor() {
+    constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {
         PageScrollConfig.defaultScrollOffset = 50;
         PageScrollConfig.defaultEasingLogic = {
             ease: (t, b, c, d) => {

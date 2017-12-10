@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { AppComponent } from './app.component';
@@ -35,6 +38,8 @@ import { TipsModule } from './tips/tips.module';
         TipsModule,
         Ng2PageScrollModule,
         NavbarModule,
+        Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+        RouterModule.forRoot([]),
     ],
     providers: [],
     bootstrap: [AppComponent],
