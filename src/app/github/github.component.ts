@@ -9,14 +9,10 @@ import { GithubService } from './github.service';
     styleUrls: ['./github.component.scss'],
 })
 export class GithubComponent implements OnInit {
-    public whenFetchedGithub: Observable<GithubModel[]>;
-    public whenFetchedGithubEvent: Observable<GithubEvent>;
-    public rank$: Observable<number>;
+    public github$: Observable<GithubStats>;
 
     constructor(githubService: GithubService) {
-        this.whenFetchedGithub = githubService.Profile$;
-        this.whenFetchedGithubEvent = githubService.LastEvent$;
-        this.rank$ = githubService.Rank$;
+        this.github$ = githubService.Github$;
     }
 
     public ngOnInit(): void {
