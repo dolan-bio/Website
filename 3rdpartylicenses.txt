@@ -133,7 +133,7 @@ angular2-masonry@0.4.0
 ISC
 ISC
 
-phaser-ce@2.9.2
+phaser-ce@2.9.3
 MIT
 The MIT License (MIT)
 
