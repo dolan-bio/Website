@@ -37,9 +37,10 @@ export class NavbarComponent {
     constructor(private cvService: CvService) {
         this.whenUserScrolledPast = new Observable<boolean>((observer) => {
             const navHeight = this.nav.nativeElement.offsetHeight;
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
             document.addEventListener('scroll', (e) => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
                 if (scrollTop > window.innerHeight - navHeight) {
                     observer.next(true);
                 } else {
