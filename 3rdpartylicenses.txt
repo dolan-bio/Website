@@ -43,7 +43,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-zone.js@0.8.18
+zone.js@0.8.20
 MIT
 The MIT License
 
@@ -96,7 +96,7 @@ THE SOFTWARE.
 MIT
 MIT
 
-fizzy-ui-utils@2.0.5
+fizzy-ui-utils@2.0.7
 MIT
 MIT
 
@@ -133,7 +133,11 @@ angular2-masonry@0.4.0
 ISC
 ISC
 
-phaser-ce@2.9.3
+angulartics2@4.6.3
+MIT
+MIT
+
+phaser-ce@2.10.0
 MIT
 The MIT License (MIT)
 
@@ -194,11 +198,7 @@ MIT
 MIT
 MIT
 
-masonry-layout@4.2.0
-MIT
-MIT
-
-angulartics2@4.4.0
+masonry-layout@4.2.1
 MIT
 MIT
 
