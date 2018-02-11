@@ -1,4 +1,6 @@
 [![Build Status][travis-image]][travis-url]
+[![code style: prettier][prettier-image]][prettier-url]
+
 # Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
@@ -32,3 +34,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [travis-image]: https://travis-ci.org/dolan-bio/Website.svg?branch=master
 [travis-url]: https://travis-ci.org/dolan-bio/Website
+[prettier-image]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[prettier-url]: https://github.com/prettier/prettier
