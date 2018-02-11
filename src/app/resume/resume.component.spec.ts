@@ -11,23 +11,15 @@ describe('ResumeComponent', () => {
     let component: ResumeComponent;
     let fixture: ComponentFixture<ResumeComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [
-                ResumeComponent,
-                LoadingComponent,
-            ],
-            imports: [
-                HttpModule,
-            ],
-            providers: [
-                EducationsService,
-                ExperiencesService,
-                CvService,
-            ],
-        })
-            .compileComponents();
-    }));
+    beforeEach(
+        async(() => {
+            TestBed.configureTestingModule({
+                declarations: [ResumeComponent, LoadingComponent],
+                imports: [HttpModule],
+                providers: [EducationsService, ExperiencesService, CvService],
+            }).compileComponents();
+        }),
+    );
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ResumeComponent);

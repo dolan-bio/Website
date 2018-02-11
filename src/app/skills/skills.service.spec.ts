@@ -7,13 +7,14 @@ describe('SkillsService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [SkillsService],
-            imports: [
-                HttpModule,
-            ],
+            imports: [HttpModule],
         });
     });
 
-    it('should be created', inject([SkillsService], (service: SkillsService) => {
-        expect(service).toBeTruthy();
-    }));
+    it(
+        'should be created',
+        inject([SkillsService], (service: SkillsService) => {
+            expect(service).toBeTruthy();
+        }),
+    );
 });

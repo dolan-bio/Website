@@ -7,11 +7,11 @@ import { environment } from 'environments/environment';
 
 @Injectable()
 export class CvService {
-
     private cv$: Observable<any>;
 
     constructor(http: Http) {
-        this.cv$ = http.get(`${environment.server.uri}/cv`, { responseType: ResponseContentType.Blob })
+        this.cv$ = http
+            .get(`${environment.server.uri}/cv`, { responseType: ResponseContentType.Blob })
             .map((res) => res.blob())
             .do((blob) => {
                 saveAs(blob, 'Dolan Miu CV.docx');

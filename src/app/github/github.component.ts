@@ -15,7 +15,5 @@ export class GithubComponent implements OnInit {
         this.github$ = githubService.Github$;
     }
 
-    public ngOnInit(): void {
-    }
-
+    public ngOnInit(): void {}
 }

@@ -6,18 +6,9 @@ import { PortfolioComponent } from './portfolio.component';
 import { PortfolioService } from './portfolio.service';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        MasonryModule,
-    ],
-    declarations: [
-        PortfolioComponent,
-    ],
-    providers: [
-        PortfolioService,
-    ],
-    exports: [
-        PortfolioComponent,
-    ],
+    imports: [CommonModule, MasonryModule],
+    declarations: [PortfolioComponent],
+    providers: [PortfolioService],
+    exports: [PortfolioComponent],
 })
-export class PortfolioModule { }
+export class PortfolioModule {}

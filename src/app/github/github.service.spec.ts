@@ -7,13 +7,14 @@ describe('GithubService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [GithubService],
-            imports: [
-                HttpModule,
-            ],
+            imports: [HttpModule],
         });
     });
 
-    it('should be created', inject([GithubService], (service: GithubService) => {
-        expect(service).toBeTruthy();
-    }));
+    it(
+        'should be created',
+        inject([GithubService], (service: GithubService) => {
+            expect(service).toBeTruthy();
+        }),
+    );
 });

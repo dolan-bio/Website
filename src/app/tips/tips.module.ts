@@ -5,17 +5,9 @@ import { TipsComponent } from './tips.component';
 import { TipsService } from './tips.service';
 
 @NgModule({
-    imports: [
-        CommonModule,
-    ],
-    declarations: [
-        TipsComponent,
-    ],
-    providers: [
-        TipsService,
-    ],
-    exports: [
-        TipsComponent,
-    ],
+    imports: [CommonModule],
+    declarations: [TipsComponent],
+    providers: [TipsService],
+    exports: [TipsComponent],
 })
-export class TipsModule { }
+export class TipsModule {}

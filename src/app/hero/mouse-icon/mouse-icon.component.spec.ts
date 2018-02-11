@@ -7,12 +7,13 @@ describe('HeroComponent', () => {
     let component: MouseIconComponent;
     let fixture: ComponentFixture<MouseIconComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [MouseIconComponent],
-        })
-            .compileComponents();
-    }));
+    beforeEach(
+        async(() => {
+            TestBed.configureTestingModule({
+                declarations: [MouseIconComponent],
+            }).compileComponents();
+        }),
+    );
 
     beforeEach(() => {
         fixture = TestBed.createComponent(MouseIconComponent);

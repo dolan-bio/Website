@@ -5,17 +5,9 @@ import { SkillsComponent } from './skills.component';
 import { SkillsService } from './skills.service';
 
 @NgModule({
-    imports: [
-        CommonModule,
-    ],
-    declarations: [
-        SkillsComponent,
-    ],
-    providers: [
-        SkillsService,
-    ],
-    exports: [
-        SkillsComponent,
-    ],
+    imports: [CommonModule],
+    declarations: [SkillsComponent],
+    providers: [SkillsService],
+    exports: [SkillsComponent],
 })
-export class SkillsModule { }
+export class SkillsModule {}

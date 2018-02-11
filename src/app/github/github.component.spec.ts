@@ -8,20 +8,15 @@ describe('GithubComponent', () => {
     let component: GithubComponent;
     let fixture: ComponentFixture<GithubComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [
-                GithubComponent,
-            ],
-            imports: [
-                HttpModule,
-            ],
-            providers: [
-                GithubService,
-            ],
-        })
-            .compileComponents();
-    }));
+    beforeEach(
+        async(() => {
+            TestBed.configureTestingModule({
+                declarations: [GithubComponent],
+                imports: [HttpModule],
+                providers: [GithubService],
+            }).compileComponents();
+        }),
+    );
 
     beforeEach(() => {
         fixture = TestBed.createComponent(GithubComponent);

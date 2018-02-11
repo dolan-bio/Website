@@ -1,5 +1,5 @@
 interface GithubStats {
-    rank: number,
-    event: GithubEvent,
-    contributions: number,
+    rank: number;
+    event: GithubEvent;
+    contributions: number;
 }

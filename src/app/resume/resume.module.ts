@@ -8,20 +8,9 @@ import { LoadingComponent } from './loading/loading.component';
 import { ResumeComponent } from './resume.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        CvModule,
-    ],
-    declarations: [
-        ResumeComponent,
-        LoadingComponent,
-    ],
-    providers: [
-        EducationsService,
-        ExperiencesService,
-    ],
-    exports: [
-        ResumeComponent,
-    ],
+    imports: [CommonModule, CvModule],
+    declarations: [ResumeComponent, LoadingComponent],
+    providers: [EducationsService, ExperiencesService],
+    exports: [ResumeComponent],
 })
-export class ResumeModule { }
+export class ResumeModule {}

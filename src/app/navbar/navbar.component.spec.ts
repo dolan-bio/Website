@@ -8,16 +8,14 @@ describe('NavbarComponent', () => {
     let component: NavbarComponent;
     let fixture: ComponentFixture<NavbarComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [NavbarComponent],
-            imports: [
-                HttpModule,
-                CvModule,
-            ],
-        })
-            .compileComponents();
-    }));
+    beforeEach(
+        async(() => {
+            TestBed.configureTestingModule({
+                declarations: [NavbarComponent],
+                imports: [HttpModule, CvModule],
+            }).compileComponents();
+        }),
+    );
 
     beforeEach(() => {
         fixture = TestBed.createComponent(NavbarComponent);

@@ -17,36 +17,50 @@ export class NavbarComponent {
     public whenUserScrolledPast: Observable<boolean>;
     @ViewChild('nav') public nav: ElementRef;
 
-    public menu: IMenuItem[] = [{
-        title: 'Profile',
-        link: 'profile',
-    }, {
-        title: 'Stats',
-        link: 'stats',
-    }, {
-        title: 'Resume',
-        link: 'resume',
-    }, {
-        title: 'Tips',
-        link: 'tips',
-    }, {
-        title: 'Portfolio',
-        link: 'portfolio',
-    }];
+    public menu: IMenuItem[] = [
+        {
+            title: 'Profile',
+            link: 'profile',
+        },
+        {
+            title: 'Stats',
+            link: 'stats',
+        },
+        {
+            title: 'Resume',
+            link: 'resume',
+        },
+        {
+            title: 'Tips',
+            link: 'tips',
+        },
+        {
+            title: 'Portfolio',
+            link: 'portfolio',
+        },
+    ];
 
     constructor(private cvService: CvService) {
         this.whenUserScrolledPast = new Observable<boolean>((observer) => {
             const navHeight = this.nav.nativeElement.offsetHeight;
 
-            document.addEventListener('scroll', (e) => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            document.addEventListener(
+                'scroll',
+                (e) => {
+                    const scrollTop =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop ||
+                        document.body.scrollTop ||
+                        0;
 
-                if (scrollTop > window.innerHeight - navHeight) {
-                    observer.next(true);
-                } else {
-                    observer.next(false);
-                }
-            }, true);
+                    if (scrollTop > window.innerHeight - navHeight) {
+                        observer.next(true);
+                    } else {
+                        observer.next(false);
+                    }
+                },
+                true,
+            );
         });
     }
 

@@ -4,9 +4,9 @@ interface EducationModel {
     notes: string;
     schoolName: string;
     startDate: {
-        year: number,
+        year: number;
     };
     endDate: {
-        year: number,
+        year: number;
     };
 }

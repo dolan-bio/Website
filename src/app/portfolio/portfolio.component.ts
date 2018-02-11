@@ -17,6 +17,6 @@ export class PortfolioComponent {
         this.whenFetchedProjects = portfolioService.WhenFetched;
         this.masonryOptions = {
             gutter: 10,
-        }
+        };
     }
 }

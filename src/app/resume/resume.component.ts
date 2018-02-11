@@ -14,7 +14,11 @@ export class ResumeComponent {
     public whenFetchedExperiences: Observable<ExperienceDocument[]>;
     public whenFetchedEducations: Observable<EducationModel[]>;
 
-    constructor(educationsService: EducationsService, experienceService: ExperiencesService, private cvService: CvService) {
+    constructor(
+        educationsService: EducationsService,
+        experienceService: ExperiencesService,
+        private cvService: CvService,
+    ) {
         this.whenFetchedEducations = educationsService.WhenFetched;
         this.whenFetchedExperiences = experienceService.WhenFetched;
     }
@@ -22,5 +26,4 @@ export class ResumeComponent {
     public generateCv(): void {
         this.cvService.Cv$.subscribe();
     }
-
 }

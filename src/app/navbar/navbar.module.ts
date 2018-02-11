@@ -5,15 +5,8 @@ import { CvModule } from '../cv/cv.module';
 import { NavbarComponent } from './navbar.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        CvModule,
-    ],
-    declarations: [
-        NavbarComponent,
-    ],
-    exports: [
-        NavbarComponent,
-    ],
+    imports: [CommonModule, CvModule],
+    declarations: [NavbarComponent],
+    exports: [NavbarComponent],
 })
-export class NavbarModule { }
+export class NavbarModule {}

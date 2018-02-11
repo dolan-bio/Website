@@ -16,7 +16,9 @@ export class PortfolioService {
     whenFetched: any;
 
     constructor(http: Http) {
-        this.whenFetched = http.get(`${environment.webtask.uri}/projects`).map((res) => res.json() as IProjectModel[])
+        this.whenFetched = http
+            .get(`${environment.webtask.uri}/projects`)
+            .map((res) => res.json() as IProjectModel[])
             .publish()
             .refCount();
     }
@@ -24,5 +26,4 @@ export class PortfolioService {
     public get WhenFetched(): Observable<IProjectModel[]> {
         return this.whenFetched;
     }
-
 }

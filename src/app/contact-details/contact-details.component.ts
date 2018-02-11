@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./contact-details.component.scss'],
 })
 export class ContactDetailsComponent {
-
-    constructor() { }
-
+    constructor() {}
 }

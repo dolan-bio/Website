@@ -44,4 +44,4 @@ import { TipsModule } from './tips/tips.module';
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

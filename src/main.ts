@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/publish';
 
 if (environment.production) {
-  enableProdMode();
+    enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);

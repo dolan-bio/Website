@@ -6,11 +6,12 @@ import { environment } from 'environments/environment';
 
 @Injectable()
 export class GithubService {
-
     private github$: Observable<GithubStats>;
 
     constructor(http: Http) {
-        this.github$ = http.get(`${environment.webtask.uri}/github`).map((res) => res.json() as GithubStats)
+        this.github$ = http
+            .get(`${environment.webtask.uri}/github`)
+            .map((res) => res.json() as GithubStats)
             .publish()
             .refCount();
     }
@@ -18,5 +19,4 @@ export class GithubService {
     public get Github$(): Observable<GithubStats> {
         return this.github$;
     }
-
 }

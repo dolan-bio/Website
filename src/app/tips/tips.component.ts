@@ -13,6 +13,5 @@ export class TipsComponent {
 
     constructor(tipsService: TipsService) {
         this.whenFetchedTip = tipsService.WhenFetched;
-     }
-
+    }
 }

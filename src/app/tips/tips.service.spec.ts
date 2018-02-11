@@ -7,13 +7,14 @@ describe('TipsService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [TipsService],
-            imports: [
-                HttpModule,
-            ],
+            imports: [HttpModule],
         });
     });
 
-    it('should be created', inject([TipsService], (service: TipsService) => {
-        expect(service).toBeTruthy();
-    }));
+    it(
+        'should be created',
+        inject([TipsService], (service: TipsService) => {
+            expect(service).toBeTruthy();
+        }),
+    );
 });

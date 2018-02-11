@@ -10,6 +10,6 @@ interface ExperienceDocument {
     endDate: ExperienceDate;
     startDate: ExperienceDate;
     company: {
-        name: string,
+        name: string;
     };
 }

@@ -10,19 +10,15 @@ describe('PortfolioComponent', () => {
     let component: PortfolioComponent;
     let fixture: ComponentFixture<PortfolioComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [PortfolioComponent],
-            imports: [
-                MasonryModule,
-                HttpModule,
-            ],
-            providers: [
-                PortfolioService,
-            ],
-        })
-            .compileComponents();
-    }));
+    beforeEach(
+        async(() => {
+            TestBed.configureTestingModule({
+                declarations: [PortfolioComponent],
+                imports: [MasonryModule, HttpModule],
+                providers: [PortfolioService],
+            }).compileComponents();
+        }),
+    );
 
     beforeEach(() => {
         fixture = TestBed.createComponent(PortfolioComponent);

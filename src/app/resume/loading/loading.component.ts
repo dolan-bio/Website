@@ -23,8 +23,7 @@ export class LoadingComponent implements OnInit {
 
             this.lines.push({
                 width: randomPercentage,
-            })
+            });
         }
     }
-
 }

@@ -4,12 +4,8 @@ import { NgModule } from '@angular/core';
 import { CvService } from './cv.service';
 
 @NgModule({
-    imports: [
-        CommonModule,
-    ],
+    imports: [CommonModule],
     declarations: [],
-    providers: [
-        CvService,
-    ],
+    providers: [CvService],
 })
-export class CvModule { }
+export class CvModule {}
