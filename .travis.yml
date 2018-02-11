@@ -20,7 +20,7 @@ script:
     - npm run lint
     - npm run sass-lint
     - npm run style
-    #- npm test
+    #- npm run ng test -- --watch=false
     #- ng build --prod --base-href "/Website/"
     - ng build --prod
 after_success:
